@@ -4,13 +4,14 @@
 [![Build Status](https://travis-ci.com/deepsdm99/EssentialFeed.svg?branch=master)](https://travis-ci.com/deepsdm99/EssentialFeed)
 #### Primary course (happy path):
 1. Execute "Load Image Feed" command with above data.
-2. System downloads data from the URL.
-3. System validates downloaded data.
-4. System creates image feed from valid data.
-5. System delivers image feed.
+2. System retrieves feed data from cache.
+3. System validates cache is less than seven days old.
+4. System creates image feed from cached data.
+5. System delivers image feed
 
-#### Invalid data – error course (sad path):
-1. System delivers invalid data error.
+#### Retrieval error course (sad path):
+1. System deletes cache.
+2. System delivers error.
 
 #### Expired cache course (sad path): 
 1. System deletes cache.
