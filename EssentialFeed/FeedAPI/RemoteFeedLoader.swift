@@ -44,7 +44,7 @@ public class RemoteFeedLoader: FeedLoader {
 //        case success([FeedItem])
 //        case failure(Error)
 //    }
-    public typealias Result = LoadFeedResult
+    public typealias Result = FeedLoader.Result
 
     public enum Error: Swift.Error {
         case connectivity
